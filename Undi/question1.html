@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cikgu yang Hensem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff0f5;
+      padding: 50px;
+    }
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: none;
+      background-color: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #e03d5b;
+    }
+    #thankyou {
+      color: green;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cikgu yang Hensem</h1>
+  <p>Pilih cikgu kegemaran anda:</p>
+
+  <button onclick="vote('Cikgu Aziz')">Cikgu Aziz</button>
+  <button onclick="vote('Cikgu Anwar')">Cikgu Anwar</button>
+  <button onclick="vote('Padi Bundle')">Padi Bundle</button>
+
+  <p id="thankyou"></p>
+  <a href="menu.html">Kembali ke Menu</a>
+
+  <script>
+    function vote(teacher) {
+      document.getElementById('thankyou').innerText = 
+        `Terima kasih! Anda telah mengundi untuk ${teacher}.`;
+    }
+  </script>
+</body>
+</html>
